@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wandering_app/widgets/menu_item.dart';
+import 'package:wandering_app/widgets/menu_item2.dart';
 
 class NavBar extends StatefulWidget {
   @override
@@ -35,7 +36,7 @@ class _NavBarState extends State<NavBar> {
             Expanded(
               child: Row(
                 children: [
-                  MenuItem('Adventures'),
+                  MenuItem2('Hola'),
                   SizedBox(
                     width: 25,
                   ),
