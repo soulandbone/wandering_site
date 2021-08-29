@@ -14,6 +14,7 @@ class _NavBarState extends State<NavBar> {
     return PreferredSize(
       preferredSize: Size(screenSize.width, 1000),
       child: Container(
+        color: Colors.transparent,
         padding: EdgeInsets.all(20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -40,14 +41,14 @@ class _NavBarState extends State<NavBar> {
                   ),
                   Text(
                     'Hello this is a test',
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: Colors.black),
                   ),
                   SizedBox(
                     width: 25,
                   ),
                   Text(
                     'Hello this is a test',
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: Colors.blue),
                   )
                 ],
               ),

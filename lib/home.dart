@@ -30,6 +30,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
+        extendBodyBehindAppBar: true,
         key: scaffoldKey,
         appBar: ResponsiveWidget.isSmallScreen(context)
             ? mobileTopBar(scaffoldKey)
@@ -40,8 +41,11 @@ class _HomePageState extends State<HomePage> {
         drawer: MobileMenu(),
         backgroundColor: Colors.transparent,
         body: Container(
-            child: Center(
-          child: Text('Surprise motherfucker'),
+            decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/forest.jpg"),
+            fit: BoxFit.cover,
+          ),
         )));
   }
 }
