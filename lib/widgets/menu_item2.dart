@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wandering_app/helpers/style.dart';
 
 class MenuItem2 extends StatelessWidget {
   final String text;
@@ -17,9 +18,12 @@ class MenuItem2 extends StatelessWidget {
       height: 100,
       padding: EdgeInsets.all(10),
       child: Column(children: [
-        horizontalLine(Colors.red),
-        Text('Hello'),
-        horizontalLine(Colors.blue),
+        horizontalLine(lightCream),
+        Text(
+          'Hello',
+          style: TextStyle(color: Colors.white),
+        ),
+        horizontalLine(greyWT),
       ]),
     );
   }
