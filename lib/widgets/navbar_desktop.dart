@@ -15,7 +15,7 @@ class _NavBarState extends State<NavBar> {
     return PreferredSize(
       preferredSize: Size(screenSize.width, 1000),
       child: Container(
-        color: Colors.transparent,
+        color: Colors.black,
         padding: EdgeInsets.all(20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -26,8 +26,8 @@ class _NavBarState extends State<NavBar> {
             Container(
               child: Image.asset(
                 'assets/logo.png',
-                width: 200,
-                height: 300,
+                width: 150,
+                height: 150,
               ),
             ),
             SizedBox(
@@ -36,21 +36,19 @@ class _NavBarState extends State<NavBar> {
             Expanded(
               child: Row(
                 children: [
-                  MenuItem2('Hola'),
+                  MenuItem2('Adventures'),
                   SizedBox(
                     width: 25,
                   ),
-                  Text(
-                    'Hello this is a test',
-                    style: TextStyle(color: Colors.black),
-                  ),
+                  MenuItem2('Social Media'),
                   SizedBox(
                     width: 25,
                   ),
-                  Text(
-                    'Hello this is a test',
-                    style: TextStyle(color: Colors.blue),
-                  )
+                  MenuItem2('Free Material'),
+                  SizedBox(
+                    width: 25,
+                  ),
+                  MenuItem2('About Us'),
                 ],
               ),
             )

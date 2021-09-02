@@ -7,23 +7,29 @@ class MenuItem2 extends StatelessWidget {
   MenuItem2(this.text);
 
   Widget horizontalLine(Color color) => Container(
-        height: 4.0,
-        width: 130.0,
+        height: 8.0,
+        width: 120.0,
         color: color,
       );
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
+      height: 120,
       padding: EdgeInsets.all(10),
       child: Column(children: [
         horizontalLine(lightCream),
-        Text(
-          'Hello',
-          style: TextStyle(color: Colors.white),
+        Container(
+          height: 20,
         ),
-        horizontalLine(greyWT),
+        Text(
+          text,
+          style: TextStyle(color: Colors.white, fontFamily: 'PlayFairDisplay'),
+        ),
+        Container(
+          height: 25,
+        ),
+        horizontalLine(mediumOrange),
       ]),
     );
   }
