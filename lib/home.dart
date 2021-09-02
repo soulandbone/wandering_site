@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
-        //extendBodyBehindAppBar: true,
+        extendBodyBehindAppBar: true,
         key: scaffoldKey,
         appBar: ResponsiveWidget.isSmallScreen(context)
             ? mobileTopBar(scaffoldKey)
@@ -40,10 +40,13 @@ class _HomePageState extends State<HomePage> {
               ),
         drawer: MobileMenu(),
         backgroundColor: Colors.transparent,
-        body: Container(
-            decoration: BoxDecoration(
-          color: Colors.black,
-          image: DecorationImage(image: AssetImage("assets/tavern.jpg"), fit: BoxFit.contain),
-        )));
+        body: Opacity(
+          opacity: .6,
+          child: Container(
+              decoration: BoxDecoration(
+            color: Colors.black,
+            image: DecorationImage(image: AssetImage("assets/tavern.jpg"), fit: BoxFit.cover),
+          )),
+        ));
   }
 }

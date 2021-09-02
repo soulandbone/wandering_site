@@ -15,7 +15,7 @@ class _NavBarState extends State<NavBar> {
     return PreferredSize(
       preferredSize: Size(screenSize.width, 1000),
       child: Container(
-        color: Colors.black,
+        color: Colors.transparent,
         padding: EdgeInsets.all(20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
