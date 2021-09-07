@@ -1,33 +1,31 @@
 import 'package:flutter/material.dart';
-
-int smallScreenWidth = 852;
-int largeScreenWidth = 1200;
+import 'package:wandering_app/helpers/constants.dart';
 
 class ResponsiveWidget extends StatelessWidget {
-  final Widget largeScreen;
-  final Widget? mediumScreen;
-  final Widget? smallScreen;
+  final Widget desktopScreen;
+  final Widget? laptopScreen;
+  final Widget? mobileScreen;
 
-  const ResponsiveWidget({required this.largeScreen, this.mediumScreen, this.smallScreen});
+  const ResponsiveWidget({required this.desktopScreen, this.laptopScreen, this.mobileScreen});
 
-  static bool isSmallScreen(BuildContext context) => MediaQuery.of(context).size.width < smallScreenWidth;
+  static bool isMobileScreen(BuildContext context) => MediaQuery.of(context).size.width <= kMobileBreakpoint;
 
-  static bool isLargeScreen(BuildContext context) => MediaQuery.of(context).size.width > largeScreenWidth;
+  static bool isLaptopScreen(BuildContext context) =>
+      (MediaQuery.of(context).size.width > kMobileBreakpoint) && (MediaQuery.of(context).size.width <= kLaptopBreakPoint);
 
-  static bool isMediumScreen(BuildContext context) =>
-      MediaQuery.of(context).size.width <= largeScreenWidth && MediaQuery.of(context).size.width >= smallScreenWidth;
+  static bool isDesktopScreen(BuildContext context) =>
+      (MediaQuery.of(context).size.width > kLaptopBreakPoint) && (MediaQuery.of(context).size.width <= kDesktopBreakPoint);
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return LayoutBuilder(builder: (context, constraints) {
       double maxWidth = constraints.maxWidth;
-      if (maxWidth > largeScreenWidth) {
-        return largeScreen;
-      } else if (maxWidth >= smallScreenWidth && maxWidth <= largeScreenWidth) {
-        return mediumScreen ?? largeScreen;
+      if (maxWidth > kLaptopBreakPoint) {
+        return desktopScreen;
+      } else if (maxWidth > kMobileBreakpoint && maxWidth <= kLaptopBreakPoint) {
+        return laptopScreen ?? desktopScreen;
       } else {
-        return smallScreen ?? largeScreen;
+        return mobileScreen ?? desktopScreen;
       }
     });
   }

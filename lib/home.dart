@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         extendBodyBehindAppBar: true,
         key: scaffoldKey,
-        appBar: ResponsiveWidget.isSmallScreen(context)
+        appBar: ResponsiveWidget.isMobileScreen(context)
             ? mobileTopBar(scaffoldKey)
             : PreferredSize(
                 preferredSize: Size(screenSize.width, 1000),

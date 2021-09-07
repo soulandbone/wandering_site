@@ -12,9 +12,7 @@ AppBar mobileTopBar(GlobalKey<ScaffoldState> key) {
         key.currentState!.openDrawer();
       },
     ),
-    title: Image.asset(
-      'assets/logo.png',
-    ),
+    title: Text('Mobile AppBar'),
     centerTitle: true,
     elevation: 0,
     backgroundColor: Colors.amberAccent,

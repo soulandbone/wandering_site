@@ -8,17 +8,16 @@ class AdventureContainer extends StatefulWidget {
 class _AdventureContainerState extends State<AdventureContainer> {
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       height: 200,
-      width: 150,
-      child: Column(
-        children: [
-          Image(image: AssetImage("assets/forest.jpg")),
-          Divider(
-            height: 10,
-          ),
-          Text('This adventure is about hungry dinosaurs')
-        ],
+      width: 200,
+      child: Card(
+        child: Image(
+          width: 200,
+          height: 200,
+          image: AssetImage("assets/forest.jpg"),
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }
