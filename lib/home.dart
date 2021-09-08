@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
         appBar: ResponsiveWidget.isMobileScreen(context)
             ? mobileTopBar(scaffoldKey)
             : PreferredSize(
-                preferredSize: Size(screenSize.width, 1000),
+                preferredSize: Size(screenSize.width, 150),
                 child: NavBar(),
               ),
         drawer: MobileMenu(),

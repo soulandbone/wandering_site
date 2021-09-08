@@ -7,12 +7,19 @@ class AdventuresPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-      child: GridView.builder(
-          itemCount: 4,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, crossAxisSpacing: 10, mainAxisSpacing: 10),
-          itemBuilder: (context, index) {
-            return GestureDetector(onTap: () {}, child: Container(child: AdventureContainer()));
-          }),
-    ));
+            child: SingleChildScrollView(
+                child: Column(
+      children: [
+        Row(
+          children: [
+            AdventureContainer(),
+            SizedBox(
+              width: 45,
+            ),
+            AdventureContainer()
+          ],
+        )
+      ],
+    ))));
   }
 }

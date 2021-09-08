@@ -11,38 +11,36 @@ class _NavBarState extends State<NavBar> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
-    return Expanded(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          SizedBox(
-            width: 20,
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        SizedBox(
+          width: 20,
+        ),
+        Container(
+          child: Image.asset(
+            'assets/logo.png',
+            width: 150,
+            height: 150,
           ),
-          Container(
-            child: Image.asset(
-              'assets/logo.png',
-              width: 150,
-              height: 150,
-            ),
-          ),
-          SizedBox(
-            width: 50,
-          ),
-          MenuItem2('Adventures'),
-          SizedBox(
-            width: 23,
-          ),
-          MenuItem2('Social Media'),
-          SizedBox(
-            width: 23,
-          ),
-          MenuItem2('Free Material'),
-          SizedBox(
-            width: 23,
-          ),
-          MenuItem2('About Us'),
-        ],
-      ),
+        ),
+        SizedBox(
+          width: 50,
+        ),
+        MenuItem2('Adventures'),
+        SizedBox(
+          width: 23,
+        ),
+        MenuItem2('Social Media'),
+        SizedBox(
+          width: 23,
+        ),
+        MenuItem2('Free Material'),
+        SizedBox(
+          width: 23,
+        ),
+        MenuItem2('About Us'),
+      ],
     );
   }
 }
