@@ -13,3 +13,28 @@ Color mediumOrange = Color(0xFFcd7162);
 Color darkBrownWT = Color(0xFF4e5a69);
 Color mediumBrownWT = Color(0xFF9d6459);
 Color lightBrownWT = Color(0xFFbe7566);
+
+Widget titleText(String text) {
+  return Text(
+    text,
+    style: TextStyle(
+      fontSize: 44,
+      color: lightCream,
+    ),
+  );
+}
+
+Widget subTitleText(String text) {
+  return Text(text,
+      style: TextStyle(
+        fontSize: 36,
+        color: mediumCream,
+      ));
+}
+
+Widget deskTopMenuText(String text) {
+  return Text(
+    text,
+    style: TextStyle(color: greyWT, fontFamily: 'PlayFairDisplay'),
+  );
+}

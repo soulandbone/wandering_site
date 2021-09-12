@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:wandering_app/helpers/constants.dart';
 import 'package:wandering_app/helpers/responsive.dart';
-import 'package:wandering_app/helpers/style.dart';
 import 'package:wandering_app/widgets/adventure_container.dart';
 
-class AdventuresPage extends StatelessWidget {
+class SocialMediaPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,8 +15,10 @@ class AdventuresPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              titleText('Adventures'),
-              subTitleText('For everyone'),
+              Text(
+                'Social Media',
+                style: TextStyle(fontSize: 36, color: Colors.amberAccent),
+              ),
               SizedBox(
                 height: 75,
               ),

@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:wandering_app/screens/about_us.dart';
+import 'package:wandering_app/screens/adventures.dart';
+import 'package:wandering_app/screens/free_material.dart';
+import 'package:wandering_app/screens/social_media.dart';
 import 'package:wandering_app/widgets/menu_item2.dart';
 
 class NavBar extends StatefulWidget {
@@ -27,19 +31,19 @@ class _NavBarState extends State<NavBar> {
         SizedBox(
           width: 50,
         ),
-        MenuItem2('Adventures'),
+        MenuItem2('Adventures', AdventuresPage()),
         SizedBox(
           width: 23,
         ),
-        MenuItem2('Social Media'),
+        MenuItem2('Social Media', SocialMediaPage()),
         SizedBox(
           width: 23,
         ),
-        MenuItem2('Free Material'),
+        MenuItem2('Free Material', FreeMaterialPage()),
         SizedBox(
           width: 23,
         ),
-        MenuItem2('About Us'),
+        MenuItem2('About Us', AboutUsPage()),
       ],
     );
   }

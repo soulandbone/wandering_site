@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:wandering_app/helpers/style.dart';
-import 'package:wandering_app/screens/adventures.dart';
 
 class MenuItem2 extends StatelessWidget {
   final String text;
+  final Widget route;
 
-  MenuItem2(this.text);
+  MenuItem2(this.text, this.route);
 
   Widget horizontalLine(Color color) => Container(
         height: 8.0,
@@ -17,7 +17,7 @@ class MenuItem2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => AdventuresPage()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => route));
       },
       child: Container(
         height: 120,
