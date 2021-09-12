@@ -15,19 +15,19 @@ class _HomePageState extends State<HomePage> {
 
   final List images = ["assets/placid-lake.jpg", "assets/forest-min.jpg", "assets/fey-min.jpg"];
 
-  Widget _makeFlatButton(
-    String text,
-    BuildContext context,
-    String route,
-  ) {
-    return Container(
-      child: TextButton(
-          onPressed: () {
-            Navigator.pushNamed(context, route);
-          },
-          child: Text(text)),
-    );
-  }
+  // Widget _makeFlatButton(
+  //   String text,
+  //   BuildContext context,
+  //   String route,
+  // ) {
+  //   return Container(
+  //     child: TextButton(
+  //         onPressed: () {
+  //           Navigator.pushNamed(context, route);
+  //         },
+  //         child: Text(text)),
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {

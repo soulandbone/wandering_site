@@ -25,15 +25,13 @@ class _AdventureContainerState extends State<AdventureContainer> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // *TODO Make it ROUND
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
-      height: 350,
-      width: 300,
-      child: Card(
-          color: mediumCream,
+        height: 350,
+        width: 400,
+        child: Card(
+          color: Colors.transparent,
           elevation: 15.0,
           child: Container(
-            decoration: BoxDecoration(gradient: LinearGradient(colors: [Colors.green, Colors.blue])),
+            decoration: BoxDecoration(gradient: LinearGradient(colors: [Colors.green, Colors.blue]), borderRadius: BorderRadius.all(Radius.circular(30))),
             child: Column(
               children: [
                 ListTile(
@@ -50,7 +48,7 @@ class _AdventureContainerState extends State<AdventureContainer> {
                 Center(child: Text(longDescription))
               ],
             ),
-          )),
-    );
+          ),
+        ));
   }
 }
