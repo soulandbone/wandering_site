@@ -4,7 +4,7 @@ import 'package:wandering_app/helpers/style.dart';
 import 'package:wandering_app/screens/about_us.dart';
 import 'package:wandering_app/screens/adventures.dart';
 import 'package:wandering_app/screens/free_material.dart';
-import 'package:wandering_app/screens/social_media.dart';
+import 'package:wandering_app/screens/articles.dart';
 
 class MobileMenu extends StatelessWidget {
   Widget listTileDrawer(String text, FaIcon icon, BuildContext context, Widget route) {
@@ -36,7 +36,7 @@ class MobileMenu extends StatelessWidget {
             SizedBox(
               height: 25,
             ),
-            listTileDrawer('Social Media', FaIcon(FontAwesomeIcons.instagram), context, SocialMediaPage()),
+            listTileDrawer('Articles', FaIcon(FontAwesomeIcons.instagram), context, ArticlesPage()),
             SizedBox(height: 25),
             listTileDrawer('Free Material', FaIcon(FontAwesomeIcons.freebsd), context, FreeMaterialPage()),
             SizedBox(height: 25),
