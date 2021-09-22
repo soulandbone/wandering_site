@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:wandering_app/helpers/constants.dart';
-import 'package:wandering_app/helpers/responsive.dart';
-import 'package:wandering_app/widgets/adventure_container.dart';
+import 'package:wandering_app/helpers/style.dart';
 
 class FreeMaterialPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: fakeBlack,
         body: Container(
             child: SingleChildScrollView(
                 child: Padding(

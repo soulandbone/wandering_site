@@ -12,9 +12,9 @@ AppBar mobileTopBar(GlobalKey<ScaffoldState> key) {
         key.currentState!.openDrawer();
       },
     ),
-    title: Text('Mobile AppBar'),
+    title: Text('Wandering Tavern'),
     centerTitle: true,
     elevation: 0,
-    backgroundColor: Colors.amberAccent,
+    backgroundColor: mediumGreenWT,
   );
 }

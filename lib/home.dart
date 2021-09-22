@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
   ) {
     var screenWidth = MediaQuery.of(context).size.width;
     return Container(
-      height: 100,
+      height: 65,
       width: (screenWidth * 0.6),
       child: Container(
         decoration: BoxDecoration(gradient: LinearGradient(colors: [Colors.black, Colors.blue]), borderRadius: BorderRadius.all(Radius.circular(30))),
@@ -52,9 +52,45 @@ class _HomePageState extends State<HomePage> {
                   child: ListTile(leading: FaIcon(FontAwesomeIcons.tiktok), title: Text('TikTok')),
                 )
               ],
+            ),
+            Container(
+              color: Colors.red,
+              width: double.infinity,
+              child: Center(child: Text('Copyright 2021 Wandering Tavern')),
             )
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _makeBottomPage2(BuildContext context) {
+    return Container(
+      color: Colors.red,
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Container(
+                height: 40,
+                width: 40,
+                child: FittedBox(
+                  child: FaIcon(FontAwesomeIcons.instagram),
+                ),
+              ),
+              Container(
+                height: 40,
+                width: 40,
+                child: FittedBox(
+                  child: FaIcon(FontAwesomeIcons.tiktok),
+                ),
+              ),
+            ],
+          ),
+          Container(
+            child: Text('Copyright © 2021 Wandering Tavern'),
+          )
+        ],
       ),
     );
   }
@@ -106,7 +142,7 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      child: _makeBottomPage(
+                      child: _makeBottomPage2(
                         context,
                       ),
                     )

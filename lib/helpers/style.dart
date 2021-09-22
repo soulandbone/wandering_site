@@ -13,6 +13,8 @@ Color mediumOrange = Color(0xFFcd7162);
 Color darkBrownWT = Color(0xFF4e5a69);
 Color mediumBrownWT = Color(0xFF9d6459);
 Color lightBrownWT = Color(0xFFbe7566);
+Color fakeBlack = Color(0xFF2b2b2e);
+Color fakeBlackDeep = Color(0xFF1e1e20);
 
 Widget titleText(String text) {
   return Text(

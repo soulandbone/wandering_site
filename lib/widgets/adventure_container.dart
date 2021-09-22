@@ -31,7 +31,7 @@ class _AdventureContainerState extends State<AdventureContainer> {
           color: Colors.transparent,
           elevation: 15.0,
           child: Container(
-            decoration: BoxDecoration(gradient: LinearGradient(colors: [Colors.green, Colors.blue]), borderRadius: BorderRadius.all(Radius.circular(30))),
+            decoration: BoxDecoration(gradient: LinearGradient(colors: [fakeBlackDeep, mediumOrange]), borderRadius: BorderRadius.all(Radius.circular(30))),
             child: Column(
               children: [
                 ListTile(

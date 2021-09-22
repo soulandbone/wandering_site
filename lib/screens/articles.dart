@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:wandering_app/helpers/style.dart';
 
 class ArticlesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: fakeBlack,
         body: Container(
             child: SingleChildScrollView(
                 child: Padding(
@@ -12,10 +14,7 @@ class ArticlesPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text(
-                'Articles',
-                style: TextStyle(fontSize: 36, color: Colors.amberAccent),
-              ),
+              Text('Articles', style: GoogleFonts.arvo(fontSize: 44, color: mediumOrange)),
               SizedBox(
                 height: 75,
               ),

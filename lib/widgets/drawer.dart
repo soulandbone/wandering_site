@@ -36,14 +36,14 @@ class MobileMenu extends StatelessWidget {
             SizedBox(
               height: 25,
             ),
-            listTileDrawer('Articles', FaIcon(FontAwesomeIcons.instagram), context, ArticlesPage()),
+            listTileDrawer('Articles', FaIcon(FontAwesomeIcons.bookOpen), context, ArticlesPage()),
             SizedBox(height: 25),
             listTileDrawer('Free Material', FaIcon(FontAwesomeIcons.freebsd), context, FreeMaterialPage()),
             SizedBox(height: 25),
             listTileDrawer('About Us', FaIcon(FontAwesomeIcons.users), context, AboutUsPage())
           ],
         ),
-        color: active,
+        color: lightCream,
       ),
     );
   }
