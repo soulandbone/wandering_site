@@ -3,10 +3,13 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:wandering_app/helpers/style.dart';
 
 class CardContainer extends StatefulWidget {
-  const CardContainer({Key? key}) : super(key: key);
+  String titleText;
+  String descriptionText;
+
+  CardContainer(this.titleText, this.descriptionText);
 
   @override
-  _CardContainerState createState() => _CardContainerState();
+  _CardContainerState createState() => _CardContainerState(titleText, descriptionText);
 }
 
 Widget _makeTitle(String text) {
@@ -28,6 +31,11 @@ Widget _makeDescription(String text) {
 }
 
 class _CardContainerState extends State<CardContainer> {
+  String titleText;
+  String descriptionText;
+
+  _CardContainerState(this.titleText, this.descriptionText);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -42,11 +50,11 @@ class _CardContainerState extends State<CardContainer> {
             Placeholder(
               fallbackHeight: 160,
             ),
-            Align(alignment: Alignment.centerLeft, child: _makeTitle('The Great One Eyed')),
+            Align(alignment: Alignment.centerLeft, child: _makeTitle(titleText)),
             SizedBox(
               height: 25,
             ),
-            _makeDescription('This is a big adventure, designed for people \n  With a lot of obstacles \n And for many more')
+            _makeDescription(descriptionText)
           ],
         ),
       ),
