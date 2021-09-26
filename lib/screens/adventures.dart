@@ -4,12 +4,21 @@ import 'package:wandering_app/helpers/constants.dart';
 import 'package:wandering_app/helpers/responsive.dart';
 import 'package:wandering_app/helpers/style.dart';
 import 'package:wandering_app/widgets/card_container.dart';
+import 'package:wandering_app/widgets/navbar_desktop.dart';
+import 'package:wandering_app/widgets/navbar_mobile.dart';
 
 class AdventuresPage extends StatelessWidget {
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
-    // TODO if the screen is small, make it so adventure container is only one per row
+    var screenSize = MediaQuery.of(context).size;
     return Scaffold(
+        appBar: ResponsiveWidget.isMobileScreen(context)
+            ? mobileTopBar(scaffoldKey)
+            : PreferredSize(
+                preferredSize: Size(screenSize.width, 150),
+                child: NavBar(),
+              ),
         backgroundColor: fakeBlack,
         body: Container(
             child: SingleChildScrollView(
@@ -18,7 +27,7 @@ class AdventuresPage extends StatelessWidget {
                     child: Column(
                       children: [
                         Container(
-                          child: Text('Adventures', style: GoogleFonts.arvo(fontSize: 44, color: mediumOrange)),
+                          child: Text('Adventures', style: TextStyle(fontSize: 36, color: mediumOrange)),
                         ),
                         SizedBox(
                           height: 50,

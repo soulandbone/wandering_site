@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:wandering_app/helpers/responsive.dart';
+import 'package:wandering_app/helpers/style.dart';
 import 'package:wandering_app/widgets/drawer.dart';
 import 'package:wandering_app/widgets/navbar_desktop.dart';
 import 'package:wandering_app/widgets/navbar_mobile.dart';
@@ -21,7 +22,7 @@ _launchURL(String url) async {
 }
 
 class _HomePageState extends State<HomePage> {
-  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
+  final GlobalKey<ScaffoldState> homeScaffoldKey = GlobalKey();
 
   final List images = ["assets/placid-lake.jpg", "assets/forest-min.jpg", "assets/fey-min.jpg"];
 
@@ -66,7 +67,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget _makeBottomPage2(BuildContext context) {
     return Container(
-      color: Colors.red,
+      color: Colors.transparent,
       child: Column(
         children: [
           Row(
@@ -75,20 +76,39 @@ class _HomePageState extends State<HomePage> {
                 height: 40,
                 width: 40,
                 child: FittedBox(
-                  child: FaIcon(FontAwesomeIcons.instagram),
+                  child: InkWell(
+                    child: FaIcon(
+                      FontAwesomeIcons.instagram,
+                      color: lightCream,
+                    ),
+                    onTap: () {
+                      _launchURL('https://www.instagram.com/wandering_tavern');
+                    },
+                  ),
                 ),
               ),
               Container(
                 height: 40,
                 width: 40,
                 child: FittedBox(
-                  child: FaIcon(FontAwesomeIcons.tiktok),
+                  child: InkWell(
+                    child: FaIcon(
+                      FontAwesomeIcons.tiktok,
+                      color: lightCream,
+                    ),
+                    onTap: () {
+                      _launchURL('https://www.tiktok.com/@wandering_tavern');
+                    },
+                  ),
                 ),
               ),
             ],
           ),
           Container(
-            child: Text('Copyright © 2021 Wandering Tavern'),
+            child: Text(
+              'Copyright © 2021 Wandering Tavern',
+              style: TextStyle(color: lightOrange, fontWeight: FontWeight.bold),
+            ),
           )
         ],
       ),
@@ -100,9 +120,9 @@ class _HomePageState extends State<HomePage> {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       extendBodyBehindAppBar: true,
-      key: scaffoldKey,
+      key: homeScaffoldKey,
       appBar: ResponsiveWidget.isMobileScreen(context)
-          ? mobileTopBar(scaffoldKey)
+          ? mobileTopBar(homeScaffoldKey)
           : PreferredSize(
               preferredSize: Size(screenSize.width, 150),
               child: NavBar(),
@@ -142,8 +162,11 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      child: _makeBottomPage2(
-                        context,
+                      child: Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: _makeBottomPage2(
+                          context,
+                        ),
                       ),
                     )
                   ],

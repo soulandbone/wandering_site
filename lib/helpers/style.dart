@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-Color active = Color(0xFFED9B59);
-Color disable = Color(0xFF7D8790);
 Color lightCream = Color(0xFFECD89D);
 Color mediumCream = Color(0xFFe9b67f);
 Color greyWT = Color(0XFFC2C2A6);
